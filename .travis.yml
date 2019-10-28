@@ -22,7 +22,7 @@ install:
   - ./scripts/setup_nix.sh
   - . $HOME/.nix-profile/etc/profile.d/nix.sh
 
-  - cd client/client-multi/client-c/ && travis_retry nix-shell -Q --pure --run true --arg cc3200Support false && cd ../../..
+  #- cd client/client-multi/client-c/ && travis_retry nix-shell -Q --pure --run true --arg cc3200Support false && cd ../../..
   - cd client/client-multi/client-cpp/ && travis_retry nix-shell -Q --pure --run true && cd ../../..
   - travis_retry nix-shell -Q --packages pkgs.maven --pure --run true
 
